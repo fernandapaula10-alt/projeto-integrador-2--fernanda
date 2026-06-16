@@ -1,0 +1,94 @@
+# projeto-integrador-2--fernanda/* Configurações Globais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* Estilização do Cabeçalho (Header) */
+.site-header {
+    background-color: #1e293b; /* Fundo azul escuro profissional */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Responsividade: Alinha título à esquerda e botões à direita em telas maiores */
+@media (min-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Título do Site */
+.site-title {
+    color: #f8fafc;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Menu de Navegação */
+.site-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+/* Estilo Base Comum dos Botões */
+.nav-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Cores específicas e efeitos de Hover para cada matéria */
+.btn-programacao {
+    background-color: #3b82f6; /* Azul */
+    color: #ffffff;
+}
+.btn-programacao:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+.btn-robotica {
+    background-color: #10b981; /* Verde */
+    color: #ffffff;
+}
+.btn-robotica:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
+}
+
+.btn-fisica {
+    background-color: #8b5cf6; /* Roxo */
+    color: #ffffff;
+}
+.btn-fisica:hover {
+    background-color: #7c3aed;
+    transform: translateY(-2px);
+}
