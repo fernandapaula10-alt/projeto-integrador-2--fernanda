@@ -1,4 +1,4 @@
-# projeto-integrador-2--fernanda/* Configurações Globais e Reset */
+/* Configurações Globais e Reset */
 * {
     margin: 0;
     padding: 0;
@@ -92,3 +92,121 @@ body {
     background-color: #7c3aed;
     transform: translateY(-2px);
 }
+.robotica-section {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .robotica-section {
+                flex-direction: row;
+            }
+        }
+
+        /* Lado Esquerdo: Conteúdo Textual */
+        .content-box {
+            padding: 40px;
+            flex: 1;
+        }
+
+        .tag {
+            background-color: #e1f5fe;
+            color: #0288d1;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .content-box h2 {
+            font-size: 2rem;
+            color: #1a237e;
+            margin: 15px 0;
+        }
+
+        .content-box p {
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Destaque das Conclusões */
+        .highlights {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .highlights li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .highlights li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        /* Lado Direito: Elemento Visual (O Disco) */
+        .visual-box {
+            background: #1a237e;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            color: white;
+            text-align: center;
+        }
+
+        /* O Disco de Newton em CSS */
+        .newton-disk {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            /* Divisão das cores do arco-íris */
+            background: conic-gradient(
+                #ff0000 0deg 51deg,
+                #ff7f00 51deg 102deg,
+                #ffff00 102deg 153deg,
+                #00ff00 153deg 204deg,
+                #0000ff 204deg 255deg,
+                #4b0082 255deg 306deg,
+                #9400d3 306deg 360deg
+            );
+            transition: transform 0.5s ease;
+            cursor: pointer;
+        }
+
+        /* Efeito de Giro Rápido ao passar o mouse */
+        .visual-box:hover .newton-disk {
+            animation: spin 0.3s linear infinite;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .visual-box p {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
